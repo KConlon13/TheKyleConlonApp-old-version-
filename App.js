@@ -5,7 +5,7 @@ import { Header } from 'react-native-elements'
 export default class App extends React.Component {
 
   onPressButton(){
-    alert("Welcome to Kyle's website! This will be the menu eventually!")
+    alert("Welcome to Kyle's website! This will be the menu eventually 🤞")
   }
 
   render(){
