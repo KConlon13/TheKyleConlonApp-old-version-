@@ -5,7 +5,7 @@ import { Header } from 'react-native-elements'
 export default class App extends React.Component {
 
   onPressButton(){
-    alert("Welcome to Kyle's website! This will be the menu nav bar eventually")
+    alert("Welcome to Kyle's website! This will be the menu eventually!")
   }
 
   render(){
@@ -14,7 +14,7 @@ export default class App extends React.Component {
     
           <Header
             backgroundColor="dodgerblue" 
-            centerComponent={{text: 'MENU', onPress: ()=>this.onPressButton(), style: {color: 'white', fontSize: 18} } }
+            centerComponent={{text: 'MENU', onPress: ()=>this.onPressButton(), style: {color: 'white', fontSize: 18, fontFamily: "Futura"} } }
             />
     
           <View style={styles.container}>
