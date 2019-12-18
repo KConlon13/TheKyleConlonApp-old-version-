@@ -21,7 +21,7 @@ export default class App extends React.Component {
             <Avatar 
               rounded
               size="xlarge"
-              onPress={() => alert("Photo click works!")}
+              onPress={() => alert("Ouch my nose!")}
               activeOpacity={0.7}
               source={
                 // uri:
@@ -30,8 +30,13 @@ export default class App extends React.Component {
               }
             />
             <View style={styles.welcomeText}>
-              <Text style={styles.name}>Hi there, I'm </Text><Text style={styles.coloredName}>Kyle Conlon</Text>
+              <Text style={styles.name}>Hi there, I'm </Text>
+              <Text style={styles.coloredName}>Kyle Conlon</Text>
               <Text style={styles.subname}>Web & iOS Developer</Text>
+              <Text style={styles.welcomeLine}>________________________</Text>
+              <Text style={styles.welcomeParagraph}>Software and music extraordinaire, Kyle Conlon had the most humble beginnings when it came to code. Spending hours upon hours on Codecadamy while in a van touring the country with a band was a great start, but he craved something more. That's when he discovered Flatiron School's Immersive Software Engineering Bootcamp- which helped him propel his coding skills to even greater heights! He is now able to craft beautifully elaborate websites and iOS apps using his mere mortal hands, something he'd never thought possible. And so his adventure continues! Where shall it take him next? </Text>
+              <Text style={styles.welcomeLine}>________________________</Text>
+              {/* <Text>Skills Section</Text> */}
             </View>
           </View>
     
@@ -47,7 +52,7 @@ const styles = StyleSheet.create({
     // backgroundColor: "black",
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: "20%",
+    marginTop: "18%",
     // margin: "50%"
   },
   name: {
@@ -73,5 +78,19 @@ const styles = StyleSheet.create({
   // welcomeText: {
   //   backgroundColor: 'white',
   //   // padding: "20%"
-  // }
+  // },
+  welcomeLine: {
+    textAlign: "center",
+    color: "#E1E1E1",
+    paddingTop: "3%",
+  },
+  welcomeParagraph: {
+    textAlign: "center",
+    fontSize: 12,
+    paddingTop: "5%",
+    paddingLeft: "5%",
+    paddingRight: "5%",
+    paddingBottom: "1%",
+
+  }
 });
