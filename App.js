@@ -38,9 +38,9 @@ export default class App extends React.Component {
               </View>
 
               <View style={styles.iconGroup}>
-                <Icon reverse color="dodgerblue" name="linkedin" type="font-awesome" onPress={()=>alert("LinkedIn page pops up here")}/>
-                <Icon raised color="black" name="github" type="font-awesome" onPress={()=>alert("Github page pops up here")}/>
-                <Icon reverse color="red" name="social-medium" type="foundation" onPress={()=>alert("Medium blog page pops up here")}/>
+                <Icon reverse color="dodgerblue" name="linkedin" type="font-awesome" onPress={()=>Linking.openURL("https://www.linkedin.com/in/devkyleconlon/")}/>
+                <Icon raised color="black" name="github" type="font-awesome" onPress={()=>Linking.openURL("https://github.com/KConlon13")}/>
+                <Icon reverse color="red" name="social-medium" type="foundation" onPress={()=>Linking.openURL("https://medium.com/@kyleconlon13")}/>
               </View>
 
           </View>
