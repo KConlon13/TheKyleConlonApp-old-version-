@@ -23,13 +23,14 @@ export default class App extends React.Component {
               size="xlarge"
               onPress={() => alert("Photo click works!")}
               activeOpacity={0.7}
-              source={{
-                uri:
-                'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-              }}
+              source={
+                // uri:
+                // 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                require("./kylePhoto.jpg")
+              }
             />
             <View style={styles.welcomeText}>
-              <Text style={styles.name}>Hi there, I'm </Text><Text style={styles.coloredName}>Kyle Conlon!</Text>
+              <Text style={styles.name}>Hi there, I'm </Text><Text style={styles.coloredName}>Kyle Conlon</Text>
               <Text style={styles.subname}>Web & iOS Developer</Text>
             </View>
           </View>
@@ -63,10 +64,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   subname: {
-    fontSize: 14,
+    fontSize: 13,
     textAlign: "center",
     justifyContent: "center",
     fontWeight: "bold",
+    paddingTop: "1%"
   },
   // welcomeText: {
   //   backgroundColor: 'white',
