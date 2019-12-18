@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import { Header, Avatar } from 'react-native-elements'
+import { StyleSheet, Text, View, Linking } from 'react-native';
+import { Header, Avatar, Button, Icon } from 'react-native-elements';
 
 export default class App extends React.Component {
 
@@ -23,13 +23,9 @@ export default class App extends React.Component {
               size="xlarge"
               onPress={() => alert("Ouch my nose!")}
               activeOpacity={0.7}
-              source={
-                // uri:
-                // 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-                require("./kylePhoto.jpg")
-              }
+              source={ require("./kylePhoto.jpg") }
             />
-            <View style={styles.welcomeText}>
+            <View>
               <Text style={styles.name}>Hi there, I'm </Text>
               <Text style={styles.coloredName}>Kyle Conlon</Text>
               <Text style={styles.subname}>Web & iOS Developer</Text>
@@ -37,9 +33,18 @@ export default class App extends React.Component {
               <Text style={styles.welcomeParagraph}>Software and music extraordinaire, Kyle Conlon had the most humble beginnings when it came to code. Spending hours upon hours on Codecadamy while in a van touring the country with a band was a great start, but he craved something more. That's when he discovered Flatiron School's Immersive Software Engineering Bootcamp- which helped him propel his coding skills to even greater heights! He is now able to craft beautifully elaborate websites and iOS apps using his mere mortal hands, something he'd never thought possible. And so his adventure continues! Where shall it take him next? </Text>
               <Text style={styles.welcomeLine}>________________________</Text>
               {/* <Text>Skills Section</Text> */}
-            </View>
+              <View style={{margin: 20}}>
+                <Button raised title="Shoot me an Email" onPress={()=>Linking.openURL('mailto:KyleConlon13@gmail.com')} />
+              </View>
+
+              <View style={styles.iconGroup}>
+                <Icon reverse color="dodgerblue" name="linkedin" type="font-awesome" onPress={()=>alert("LinkedIn page pops up here")}/>
+                <Icon raised color="black" name="github" type="font-awesome" onPress={()=>alert("Github page pops up here")}/>
+                <Icon reverse color="red" name="social-medium" type="foundation" onPress={()=>alert("Medium blog page pops up here")}/>
+              </View>
+
           </View>
-    
+        </View>
         </View>
       );
     }
@@ -47,13 +52,9 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    // backgroundColor: '#fff',
-    // backgroundColor: "black",
+    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: "18%",
-    // margin: "50%"
+    marginTop: "13%",
   },
   name: {
     fontSize: 26,
@@ -75,10 +76,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     paddingTop: "1%"
   },
-  // welcomeText: {
-  //   backgroundColor: 'white',
-  //   // padding: "20%"
-  // },
   welcomeLine: {
     textAlign: "center",
     color: "#E1E1E1",
@@ -91,6 +88,9 @@ const styles = StyleSheet.create({
     paddingLeft: "5%",
     paddingRight: "5%",
     paddingBottom: "1%",
-
+  },
+  iconGroup: {
+    flexDirection: "row",
+    justifyContent: "center"
   }
 });
