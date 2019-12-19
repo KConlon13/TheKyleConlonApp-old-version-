@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native';
-import { Header, Avatar, Button, Icon } from 'react-native-elements';
+import { Header, Avatar, Button, Icon, ButtonGroup } from 'react-native-elements';
 
 export default class App extends React.Component {
 
@@ -34,7 +34,7 @@ export default class App extends React.Component {
               <Text style={styles.welcomeLine}>________________________</Text>
               {/* <Text>Skills Section</Text> */}
               <View style={{margin: 20}}>
-                <Button raised buttonStyle={styles.emailButton} title="Shoot me an Email" onPress={()=>Linking.openURL('mailto:KyleConlon13@gmail.com')} />
+                  <Button raised buttonStyle={styles.emailButton} title="Shoot Me An Email ✉️" onPress={()=>Linking.openURL('mailto:KyleConlon13@gmail.com')} />
               </View>
 
               <View style={styles.iconGroup}>
@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   emailButton: {
-    backgroundColor: "#31CCC8"
+    backgroundColor: "#31CCC8",
+    fontSize: 1
   }
 });
