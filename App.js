@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Linking } from 'react-native';
+import { StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native';
 import { Header, Avatar, Button, Icon } from 'react-native-elements';
 
 export default class App extends React.Component {
@@ -34,11 +34,12 @@ export default class App extends React.Component {
               <Text style={styles.welcomeLine}>________________________</Text>
               {/* <Text>Skills Section</Text> */}
               <View style={{margin: 20}}>
-                <Button raised title="Shoot me an Email" onPress={()=>Linking.openURL('mailto:KyleConlon13@gmail.com')} />
+                <Button raised buttonStyle={styles.emailButton} title="Shoot me an Email" onPress={()=>Linking.openURL('mailto:KyleConlon13@gmail.com')} />
               </View>
 
               <View style={styles.iconGroup}>
-                <Icon reverse color="dodgerblue" name="linkedin" type="font-awesome" onPress={()=>Linking.openURL("https://www.linkedin.com/in/devkyleconlon/")}/>
+                <Icon reverse color="black" name="phone" type="font-awesome" onPress={()=>Linking.openURL("tel:516-640-9350")}/>
+                <Icon reverse color="#2867B2" name="linkedin" type="font-awesome" onPress={()=>Linking.openURL("https://www.linkedin.com/in/devkyleconlon/")}/>
                 <Icon raised color="black" name="github" type="font-awesome" onPress={()=>Linking.openURL("https://github.com/KConlon13")}/>
                 <Icon reverse color="red" name="social-medium" type="foundation" onPress={()=>Linking.openURL("https://medium.com/@kyleconlon13")}/>
               </View>
@@ -92,5 +93,8 @@ const styles = StyleSheet.create({
   iconGroup: {
     flexDirection: "row",
     justifyContent: "center"
+  },
+  emailButton: {
+    backgroundColor: "#31CCC8"
   }
 });
