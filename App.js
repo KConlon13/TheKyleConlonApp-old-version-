@@ -15,8 +15,13 @@ export default class App extends React.Component {
   }
 
   welcomeButtonHandler(){
-    this.setState({welcomeScreen: true})
-    alert(this.state.welcomeScreen)
+    this.setState({welcomeScreen: true, aboutMeScreen: false, myProjectsScreen: false})
+  }
+  aboutMeButtonHandler(){
+    this.setState({welcomeScreen: false, aboutMeScreen: true, myProjectsScreen: false})
+  }
+  myProjectsButtonHandler(){
+    this.setState({welcomeScreen: false, aboutMeScreen: false, myProjectsScreen: true})
   }
 
   render(){
@@ -24,14 +29,14 @@ export default class App extends React.Component {
         <View>
           <Header
             backgroundColor="#31CCC8" 
-            leftComponent={{text: 'ABOUT', style: {color: 'white', fontSize: 10, fontFamily: "Futura"}}}
+            leftComponent={{text: 'ABOUT', onPress: ()=>this.aboutMeButtonHandler(), style: {color: 'white', fontSize: 10, fontFamily: "Futura"}}}
             centerComponent={{text: 'WELCOME', onPress: ()=>this.welcomeButtonHandler(), style: {color: 'white', fontSize: 18, fontFamily: "Futura"} } }
-            rightComponent={{text: 'PROJECTS', style: {color: 'white', fontSize: 10, fontFamily: "Futura"}}}
+            rightComponent={{text: 'PROJECTS', onPress: ()=>this.myProjectsButtonHandler(), style: {color: 'white', fontSize: 10, fontFamily: "Futura"}}}
             />
 
-          <WelcomeScreen/>
-
-
+          {this.state.welcomeScreen === true ? <WelcomeScreen/> : null}
+          {this.state.aboutMeScreen === true ? <AboutMeScreen/> : null}
+          {this.state.myProjectsScreen === true ? <MyProjectsScreen/> : null}
 
         </View>
       );
