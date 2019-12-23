@@ -10,12 +10,14 @@ class MyProjectsScreen extends Component {
 
     videoNames = ["Chewsy iOS App", "ArtWork Web Service", "Potterless Web Experience"]
 
+    videoColors = ["#FF6700", "#13E9F0", "#7713F0"]
+
     render(){
         return (
             <View>
-                <VideoPlayer videoUrl={this.videoLinks[0]} videoName={this.videoNames[0]} /> 
-                <VideoPlayer videoUrl={this.videoLinks[1]} videoName={this.videoNames[1]} />
-                <VideoPlayer videoUrl={this.videoLinks[2]} videoName={this.videoNames[2]} />
+                <VideoPlayer videoUrl={this.videoLinks[0]} videoName={this.videoNames[0]} videoColor ={this.videoColors[0]} /> 
+                <VideoPlayer videoUrl={this.videoLinks[1]} videoName={this.videoNames[1]} videoColor ={this.videoColors[1]} />
+                <VideoPlayer videoUrl={this.videoLinks[2]} videoName={this.videoNames[2]} videoColor ={this.videoColors[2]} />
             </View>
         )
     }

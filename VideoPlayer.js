@@ -8,7 +8,7 @@ class VideoPlayer extends Component {
         return (
             <View>
                 <Text>{this.props.videoName}</Text>
-                <Icon reverse color="red" name="youtube" type="font-awesome" onPress={()=>Linking.openURL(this.props.videoUrl)}/> 
+                <Icon reverse color={this.props.videoColor} name="youtube" type="font-awesome" onPress={()=>Linking.openURL(this.props.videoUrl)}/> 
             </View>
         )
     }
