@@ -29,7 +29,7 @@ export default class App extends React.Component {
         <View>
           <Header
             backgroundColor="#31CCC8" 
-            leftComponent={{text: 'ABOUT', onPress: ()=>this.aboutMeButtonHandler(), style: {color: 'white', fontSize: 10, fontFamily: "Futura"}}}
+            leftComponent={{text: 'ABOUT ME', onPress: ()=>this.aboutMeButtonHandler(), style: {color: 'white', fontSize: 10, fontFamily: "Futura"}}}
             centerComponent={{text: 'WELCOME', onPress: ()=>this.welcomeButtonHandler(), style: {color: 'white', fontSize: 18, fontFamily: "Futura"} } }
             rightComponent={{text: 'PROJECTS', onPress: ()=>this.myProjectsButtonHandler(), style: {color: 'white', fontSize: 10, fontFamily: "Futura"}}}
             />

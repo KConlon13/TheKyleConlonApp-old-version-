@@ -23,7 +23,7 @@ class WelcomeScreen extends Component {
                     <Text style={styles.welcomeLine}>________________________</Text>
 
                     <View style={{margin: 20}}>
-                        <Button raised buttonStyle={styles.emailButton} title="Shoot Me An Email ✉️" onPress={()=>Linking.openURL('mailto:KyleConlon13@gmail.com')} />
+                        <Button raised buttonStyle={styles.emailButton} title="Send Me An Email" onPress={()=>Linking.openURL('mailto:KyleConlon13@gmail.com')} />
                     </View>
 
                     <View style={styles.iconGroup}>
