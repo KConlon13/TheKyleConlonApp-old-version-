@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { Icon, Button, Container, Content, Left } from 'native-base';
-import { StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Linking, TouchableOpacity, ScrollView } from 'react-native';
 import { Avatar, Button, Icon, ButtonGroup } from 'react-native-elements';
 import VideoPlayer from './VideoPlayer'
 
@@ -16,13 +16,24 @@ class MyProjectsScreen extends Component {
 
     render(){
         return (
-            <View>
-                <VideoPlayer videoUrl={this.videoLinks[0]} videoName={this.videoNames[0]} videoColor ={this.videoColors[0]} videoImage={this.videoImages[0]} /> 
-                <VideoPlayer videoUrl={this.videoLinks[1]} videoName={this.videoNames[1]} videoColor ={this.videoColors[1]} videoImage={this.videoImages[1]} />
-                <VideoPlayer videoUrl={this.videoLinks[2]} videoName={this.videoNames[2]} videoColor ={this.videoColors[2]} videoImage={this.videoImages[2]} />
+            <View style={styles.projectsPage}>
+                <ScrollView 
+                ref={ref => this.scrollView = ref}
+                onContentSizeChange={(contentWidth, contentHeight)=>{  
+                }}>
+                    <VideoPlayer videoUrl={this.videoLinks[0]} videoName={this.videoNames[0]} videoColor ={this.videoColors[0]} videoImage={this.videoImages[0]} /> 
+                    <VideoPlayer videoUrl={this.videoLinks[1]} videoName={this.videoNames[1]} videoColor ={this.videoColors[1]} videoImage={this.videoImages[1]} />
+                    <VideoPlayer videoUrl={this.videoLinks[2]} videoName={this.videoNames[2]} videoColor ={this.videoColors[2]} videoImage={this.videoImages[2]} />
+                </ScrollView>
             </View>
         )
     }
 }  
+
+const styles = {
+    projectsPage: {
+        height: 690
+    }
+}
 
 export default MyProjectsScreen;

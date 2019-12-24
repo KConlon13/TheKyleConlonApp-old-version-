@@ -16,24 +16,31 @@ class AboutMeScreen extends Component {
                 <Text style={styles.welcomeLine}>________________________</Text>
                 <Text style={styles.skillsTitle}>What Skills Does He Have?</Text>
                 <View style={styles.cardGroup}>
-                    <Card title="Front-End Skills">
-                        <Text>Javascript</Text>
-                        <Text>React</Text>
-                        <Text>React Native</Text>
-                        <Text>Bootstrap UI</Text>
-                        <Text>Semantic UI</Text>
-                        <Text>React Native Elements</Text>
-                        <Text>HTML & CSS</Text>
+                    <Card title="Front-End Skills" titleStyle={{ color: "#31CCC8"}} containerStyle={{ borderColor: "#31CCC8"}} >
+                        <View style={{ alignItems: "center" }}>
+                            <Text>Javascript</Text>
+                            <Text>React</Text>
+                            <Text>React Native</Text>
+                            <Text>HTML & CSS</Text>
+                            <Text>Bootstrap UI</Text>
+                            <Text>Semantic UI</Text>
+                            <Text>React Native Elements</Text>
+                        </View>
                     </Card>
-                    <Card title="Back-End Skills">
-                        <Text>Ruby</Text>
-                        <Text>Rails</Text>
-                        <Text>SQL</Text>
+                    <Card title="Back-End Skills" titleStyle={{ color: "#31CCC8"}} containerStyle={{ borderColor: "#31CCC8"}} >
+                        <View style={{ alignItems: "center" }}>
+                            <Text>Ruby</Text>
+                            <Text>Rails</Text>
+                            <Text>SQL</Text>
+                        </View>
                     </Card>
-                    <Card title="Other Skills">
-                        <Text>Git</Text>
-                        <Text>Heroku</Text>
+                    <Card title="Other Skills" titleStyle={{ color: "#31CCC8"}} containerStyle={{ borderColor: "#31CCC8"}} >
+                        <View style={{ alignItems: "center" }}>
+                            <Text>Git</Text>
+                            <Text>Heroku</Text>
+                        </View>
                     </Card>
+                    <Text style={styles.welcomeLine}>________________________</Text>
                 </View>
             </ScrollView>
             </View>

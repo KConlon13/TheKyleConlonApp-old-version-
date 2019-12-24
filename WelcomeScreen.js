@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 // import { Icon, Button, Container, Content, Left } from 'native-base';
-import { StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Linking, TouchableOpacity, ScrollView } from 'react-native';
 import { Avatar, Button, Icon, ButtonGroup } from 'react-native-elements';
 
 class WelcomeScreen extends Component {
     render(){
         return (
             <View style={styles.container}>
+            {/* <View style={styles.welcomePage}>
+            <ScrollView 
+            ref={ref => this.scrollView = ref}
+            onContentSizeChange={(contentWidth, contentHeight)=>{  
+            }}> */}
                 <Avatar 
                 rounded
                 size="xlarge"
@@ -33,6 +38,8 @@ class WelcomeScreen extends Component {
                         <Icon reverse color="red" name="social-medium" type="foundation" onPress={()=>Linking.openURL("https://medium.com/@kyleconlon13")}/>
                     </View>
                 </View>
+                {/* </ScrollView>
+                </View> */}
             </View>
         )
     }
@@ -84,6 +91,9 @@ const styles = StyleSheet.create({
       emailButton: {
         backgroundColor: "#31CCC8",
         fontSize: 1
+      },
+      welcomePage: {
+        height: 690
       }
 });
 
