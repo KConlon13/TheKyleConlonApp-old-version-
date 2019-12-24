@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 // import { Icon, Button, Container, Content, Left } from 'native-base';
-import { StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Linking, TouchableOpacity, ScrollView } from 'react-native';
 import { Avatar, Button, Icon, ButtonGroup, Card } from 'react-native-elements';
 
 class AboutMeScreen extends Component {
     render(){
         return (
-            <View>
+            <View style={styles.aboutMePage}>
+            <ScrollView 
+            ref={ref => this.scrollView = ref}
+            onContentSizeChange={(contentWidth, contentHeight)=>{  
+            }}>
                 <Text style={styles.name}>Who Is Kyle Conlon?</Text>
                 <Text style={styles.welcomeParagraph}>Software and music extraordinaire, Kyle Conlon had the most humble beginnings when it came to code. Spending hours upon hours on Codecadamy while in a van touring the country with a band was a great start, but he craved something more. That's when he discovered Flatiron School's Immersive Software Engineering Bootcamp- which helped him propel his coding skills to even greater heights! He is now able to craft beautifully elaborate websites and iOS apps using his mere mortal hands, something he'd never thought possible. And so his adventure continues! Where shall it take him next? </Text>
                 <Text style={styles.welcomeLine}>________________________</Text>
@@ -31,6 +35,7 @@ class AboutMeScreen extends Component {
                         <Text>Heroku</Text>
                     </Card>
                 </View>
+            </ScrollView>
             </View>
         )
     }
@@ -41,8 +46,8 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: "#E1E1E1",
         paddingTop: "3%",
-      },
-      skillsTitle: {
+    },
+    skillsTitle: {
         fontSize: 26,
         fontWeight: "bold",
         color: "black",
@@ -69,6 +74,9 @@ const styles = StyleSheet.create({
         // flexDirection: "row",
         // justifyContent: "center",
         // margin: 1
+      },
+      aboutMePage: {
+          height: 690
       }
 });
 

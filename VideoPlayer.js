@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Icon, Button, Container, Content, Left } from 'native-base';
 import { StyleSheet, Text, View, Linking, TouchableOpacity, ActivityIndicator } from 'react-native';
-import { Avatar, Button, Icon, ButtonGroup, Image } from 'react-native-elements';
+import { Avatar, Button, Icon, ButtonGroup, Image, SocialIcon} from 'react-native-elements';
 
 class VideoPlayer extends Component {
 
