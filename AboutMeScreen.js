@@ -1,16 +1,75 @@
 import React, { Component } from 'react';
 // import { Icon, Button, Container, Content, Left } from 'native-base';
 import { StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native';
-import { Avatar, Button, Icon, ButtonGroup } from 'react-native-elements';
+import { Avatar, Button, Icon, ButtonGroup, Card } from 'react-native-elements';
 
 class AboutMeScreen extends Component {
     render(){
         return (
             <View>
-                <Text>About Me Screen!</Text>
+                <Text style={styles.name}>Who Is Kyle Conlon?</Text>
+                <Text style={styles.welcomeParagraph}>Software and music extraordinaire, Kyle Conlon had the most humble beginnings when it came to code. Spending hours upon hours on Codecadamy while in a van touring the country with a band was a great start, but he craved something more. That's when he discovered Flatiron School's Immersive Software Engineering Bootcamp- which helped him propel his coding skills to even greater heights! He is now able to craft beautifully elaborate websites and iOS apps using his mere mortal hands, something he'd never thought possible. And so his adventure continues! Where shall it take him next? </Text>
+                <Text style={styles.welcomeLine}>________________________</Text>
+                <Text style={styles.skillsTitle}>What Skills Does He Have?</Text>
+                <View style={styles.cardGroup}>
+                    <Card title="Front-End Skills">
+                        <Text>Javascript</Text>
+                        <Text>React</Text>
+                        <Text>React Native</Text>
+                        <Text>Bootstrap UI</Text>
+                        <Text>Semantic UI</Text>
+                        <Text>React Native Elements</Text>
+                        <Text>HTML & CSS</Text>
+                    </Card>
+                    <Card title="Back-End Skills">
+                        <Text>Ruby</Text>
+                        <Text>Rails</Text>
+                        <Text>SQL</Text>
+                    </Card>
+                    <Card title="Other Skills">
+                        <Text>Git</Text>
+                        <Text>Heroku</Text>
+                    </Card>
+                </View>
             </View>
         )
     }
 }  
+
+const styles = StyleSheet.create({
+    welcomeLine: {
+        textAlign: "center",
+        color: "#E1E1E1",
+        paddingTop: "3%",
+      },
+      skillsTitle: {
+        fontSize: 26,
+        fontWeight: "bold",
+        color: "black",
+        textAlign: "center",
+        marginTop: "5%",
+        marginBottom: "3%"
+      },
+    welcomeParagraph: {
+        textAlign: "center",
+        fontSize: 12,
+        paddingTop: "5%",
+        paddingLeft: "5%",
+        paddingRight: "5%",
+        paddingBottom: "1%",
+      },
+      name: {
+        fontSize: 26,
+        fontWeight: "bold",
+        color: "black",
+        textAlign: "center",
+        marginTop: "5%"
+      },
+      cardGroup: {
+        // flexDirection: "row",
+        // justifyContent: "center",
+        // margin: 1
+      }
+});
 
 export default AboutMeScreen;

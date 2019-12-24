@@ -12,7 +12,7 @@ class MyProjectsScreen extends Component {
 
     videoColors = ["#FF6700", "#13E9F0", "#7713F0"]
 
-    videoImages = ["./ChewsyLogo.png/", "./ArtWorkLogo.png/", "./PotterlessLogo.png/"]
+    videoImages = ["require(./ChewsyLogo.png)", "require(./ArtWorkLogo.png)", "require(./PotterlessLogo.png)"]
 
     render(){
         return (
