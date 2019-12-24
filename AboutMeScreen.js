@@ -42,6 +42,7 @@ class AboutMeScreen extends Component {
                     </Card>
                     <Text style={styles.welcomeLine}>________________________</Text>
                 </View>
+                {/* Add Experience and Background Following This Section Right Here */}
             </ScrollView>
             </View>
         )
