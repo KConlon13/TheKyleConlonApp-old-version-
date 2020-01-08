@@ -12,7 +12,7 @@ class AboutMeScreen extends Component {
             onContentSizeChange={(contentWidth, contentHeight)=>{  
             }}>
                 <Text style={styles.name}>Who Is Kyle Conlon?</Text>
-                <Text style={styles.welcomeParagraph}>Software and music extraordinaire, Kyle Conlon had the most humble beginnings when it came to code. Spending hours upon hours on Codecadamy while in a van touring the country with a band was a great start, but he craved something more. That's when he discovered Flatiron School's Immersive Software Engineering Bootcamp- which helped him propel his coding skills to even greater heights! He is now able to craft beautifully elaborate websites and iOS apps using his mere mortal hands, something he'd never thought possible. And so his adventure continues! Where shall it take him next? </Text>
+                <Text style={styles.introParagraph}>Software and music extraordinaire, Kyle Conlon had the most humble beginnings when it came to code. Spending hours upon hours on Codecadamy while in a van touring the country with a band was a great start, but he craved something more. That's when he discovered Flatiron School's Immersive Software Engineering Bootcamp- which helped him propel his coding skills to even greater heights! He is now able to craft beautifully elaborate websites and iOS apps using his mere mortal hands, something he'd never thought possible. And so his adventure continues! Where shall it take him next? </Text>
                 <Text style={styles.welcomeLine}>________________________</Text>
                 <Text style={styles.skillsTitle}>What Skills Does He Have?</Text>
                 <View style={styles.cardGroup}>
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         marginTop: "5%",
         marginBottom: "3%"
       },
-    welcomeParagraph: {
+    introParagraph: {
         textAlign: "center",
         fontSize: 12,
         paddingTop: "5%",

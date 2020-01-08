@@ -24,7 +24,7 @@ class WelcomeScreen extends Component {
                     <Text style={styles.coloredName}>Kyle Conlon</Text>
                     <Text style={styles.subname}>Web & iOS Developer</Text>
                     <Text style={styles.welcomeLine}>________________________</Text>
-                    <Text style={styles.welcomeParagraph}>Software and music extraordinaire, Kyle Conlon had the most humble beginnings when it came to code. Spending hours upon hours on Codecadamy while in a van touring the country with a band was a great start, but he craved something more. That's when he discovered Flatiron School's Immersive Software Engineering Bootcamp- which helped him propel his coding skills to even greater heights! He is now able to craft beautifully elaborate websites and iOS apps using his mere mortal hands, something he'd never thought possible. And so his adventure continues! Where shall it take him next? </Text>
+                    <Text style={styles.welcomeParagraph}>Welcome to Kyle Conlon's personal iOS app!             It's my personal website (in app form), created using React Native. Explore the menu above to see what I've been up to recently and learn a thing or two about me while you're here. Oh, and if you want to connect with me, feel free to reach out using one of the options below. Enjoy!</Text>
                     <Text style={styles.welcomeLine}>________________________</Text>
 
                     <View style={{margin: 20}}>
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
       },
       welcomeParagraph: {
         textAlign: "center",
-        fontSize: 12,
+        fontSize: 16,
         paddingTop: "5%",
         paddingLeft: "5%",
         paddingRight: "5%",
