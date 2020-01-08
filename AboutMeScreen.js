@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: "black",
         textAlign: "center",
-        marginTop: "5%"
+        marginTop: "7%"
       },
       cardGroup: {
         // flexDirection: "row",

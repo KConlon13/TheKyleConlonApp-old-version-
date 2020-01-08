@@ -9,7 +9,8 @@ class PotterlessProject extends Component {
         return (
             <View>
                 <Text style={styles.videoTitle} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=RsICl8cgj2s")}>Potterless Web Experience</Text>
-                <Image source={require("./PotterlessScreenshot.png")} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=RsICl8cgj2s")} style={{ width: 300, height: 200, display: "block", marginLeft:"auto", marginRight:"auto" }} PlaceholderContent={ <ActivityIndicator /> } />
+                <Image source={require("./PotterlessScreenshot.png")} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=RsICl8cgj2s")} containerStyle={{ width: 370, height: 200, display: "block", marginLeft:"auto", marginRight:"auto" }} PlaceholderContent={ <ActivityIndicator /> } />
+                <Text style={styles.dividerLine}>________________________</Text>
             </View>
         )
     }
@@ -23,6 +24,11 @@ const styles = ({
         textAlign: "center",
         marginTop: "5%",
         marginBottom: "3%"
+    },
+    dividerLine: {
+        textAlign: "center",
+        color: "#E1E1E1",
+        paddingTop: "3%"
     }
 })
 

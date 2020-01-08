@@ -9,7 +9,8 @@ class ChewsyProject extends Component {
         return (
             <View>
                 <Text style={styles.videoTitle} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=dtCtC0es7S0")}>Chewsy iOS App</Text>
-                <Image source={require("./ChewsyScreenshot.png")} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=dtCtC0es7S0")} style={{ width: 300, height: 200, display: "block", marginLeft:"auto", marginRight:"auto" }} PlaceholderContent={ <ActivityIndicator /> } />
+                <Image source={require("./ChewsyScreenshot.png")} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=dtCtC0es7S0")} containerStyle={{ width: 370, height: 200, display: "block", marginLeft:"auto", marginRight:"auto" }} PlaceholderContent={ <ActivityIndicator /> } />
+                <Text style={styles.dividerLine}>________________________</Text>
             </View>
         )
     }
@@ -21,8 +22,13 @@ const styles = ({
         fontWeight: "bold",
         color: "black",
         textAlign: "center",
-        marginTop: "5%",
-        marginBottom: "3%"
+        marginTop: "6%",
+        marginBottom: "4%"
+    },
+    dividerLine: {
+        textAlign: "center",
+        color: "#E1E1E1",
+        paddingTop: "3%"
     }
 })
 

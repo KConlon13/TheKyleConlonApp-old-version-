@@ -9,7 +9,8 @@ class ArtWorkProject extends Component {
         return (
             <View>
                 <Text style={styles.videoTitle} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=vrLMXdY-g58")}>ArtWork Web Service</Text>
-                <Image source={require("./ArtWorkScreenshot.png")} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=vrLMXdY-g58")} style={{ width: 300, height: 200, display: "block", marginLeft:"auto", marginRight:"auto" }} PlaceholderContent={ <ActivityIndicator /> } />
+                <Image source={require("./ArtWorkScreenshot.png")} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=vrLMXdY-g58")} containerStyle={{ width: 370, height: 200, display: "block", marginLeft:"auto", marginRight:"auto" }} PlaceholderContent={ <ActivityIndicator /> } />
+                <Text style={styles.dividerLine}>________________________</Text>
             </View>
         )
     }
@@ -23,6 +24,11 @@ const styles = ({
         textAlign: "center",
         marginTop: "5%",
         marginBottom: "3%"
+    },
+    dividerLine: {
+        textAlign: "center",
+        color: "#E1E1E1",
+        paddingTop: "3%"
     }
 })
 
