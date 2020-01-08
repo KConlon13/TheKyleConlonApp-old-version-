@@ -14,7 +14,7 @@ class AboutMeScreen extends Component {
                 <Text style={styles.name}>Who Is Kyle Conlon?</Text>
                 <Text style={styles.introParagraph}>Software and music extraordinaire, Kyle Conlon had the most humble beginnings when it came to code. Spending hours upon hours on Codecadamy while in a van touring the country with a band was a great start, but he craved something more. That's when he discovered Flatiron School's Immersive Software Engineering Bootcamp- which helped him propel his coding skills to even greater heights! He is now able to craft beautifully elaborate websites and iOS apps using his mere mortal hands, something he'd never thought possible. And so his adventure continues! Where shall it take him next? </Text>
                 <Text style={styles.welcomeLine}>________________________</Text>
-                <Text style={styles.skillsTitle}>What Skills Does He Have?</Text>
+                <Text style={styles.additionalTitle}>What Skills Does He Have?</Text>
                 <View style={styles.cardGroup}>
                     <Card title="Front-End Skills" titleStyle={{ color: "#31CCC8"}} containerStyle={{ borderColor: "#31CCC8"}} >
                         <View style={{ alignItems: "center" }}>
@@ -38,10 +38,15 @@ class AboutMeScreen extends Component {
                         <View style={{ alignItems: "center" }}>
                             <Text>Git</Text>
                             <Text>Heroku</Text>
+                            <Text>Microsoft Office Suite</Text>
+                            <Text>Interpersonal Skills</Text>
+                            <Text>Strong Team Player</Text>
+                            <Text>Learning & Adapting Quickly</Text>
                         </View>
                     </Card>
                     <Text style={styles.welcomeLine}>________________________</Text>
                 </View>
+                <Text style={styles.additionalTitle}>Amazing! Where Is His Resume?</Text>
                 {/* Add Experience and Background Following This Section Right Here */}
             </ScrollView>
             </View>
@@ -55,7 +60,7 @@ const styles = StyleSheet.create({
         color: "#E1E1E1",
         paddingTop: "3%",
     },
-    skillsTitle: {
+    additionalTitle: {
         fontSize: 26,
         fontWeight: "bold",
         color: "black",
