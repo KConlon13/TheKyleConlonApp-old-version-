@@ -29,7 +29,7 @@ class MyProjectsScreen extends Component {
 
 const styles = {
     projectsPage: {
-        height: 690
+        height: 730
     }
 }
 

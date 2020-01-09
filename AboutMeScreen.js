@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         // margin: 1
       },
       aboutMePage: {
-          height: 690
+          height: 730
       }
 });
 
