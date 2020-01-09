@@ -8,7 +8,7 @@ class PotterlessProject extends Component {
     render(){
         return (
             <View>
-                <Text style={styles.videoTitle} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=RsICl8cgj2s")}>Potterless Web Experience</Text>
+                <Text style={styles.videoTitle} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=RsICl8cgj2s")}>Potterless</Text>
                 <Image source={require("./PotterlessScreenshot.png")} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=RsICl8cgj2s")} containerStyle={{ width: 370, height: 200, display: "block", marginLeft:"auto", marginRight:"auto" }} PlaceholderContent={ <ActivityIndicator /> } />
                 <Text style={styles.dividerLine}>________________________</Text>
             </View>

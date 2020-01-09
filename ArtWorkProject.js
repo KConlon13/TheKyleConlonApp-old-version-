@@ -8,7 +8,7 @@ class ArtWorkProject extends Component {
     render(){
         return (
             <View>
-                <Text style={styles.videoTitle} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=vrLMXdY-g58")}>ArtWork Web Service</Text>
+                <Text style={styles.videoTitle} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=vrLMXdY-g58")}>ArtWork</Text>
                 <Image source={require("./ArtWorkScreenshot.png")} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=vrLMXdY-g58")} containerStyle={{ width: 370, height: 200, display: "block", marginLeft:"auto", marginRight:"auto" }} PlaceholderContent={ <ActivityIndicator /> } />
                 <Text style={styles.dividerLine}>________________________</Text>
             </View>
