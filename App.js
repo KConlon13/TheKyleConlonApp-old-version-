@@ -11,7 +11,7 @@ export default class App extends React.Component {
   state = {
     welcomeScreen: true,
     aboutMeScreen: false,
-    myProjectsScreen: false
+    myProjectsScreen: false,
   }
 
   welcomeButtonHandler(){
@@ -24,15 +24,33 @@ export default class App extends React.Component {
     this.setState({welcomeScreen: false, aboutMeScreen: false, myProjectsScreen: true})
   }
 
+  
+
   render(){
       return (
         <View>
+          {this.state.aboutMeScreen === true ?           
           <Header
             backgroundColor="#31CCC8" 
-            leftComponent={{text: 'ABOUT ME', onPress: ()=>this.aboutMeButtonHandler(), style: {color: 'white', fontSize: 10, fontFamily: "Futura"}}}
-            centerComponent={{text: 'WELCOME', onPress: ()=>this.welcomeButtonHandler(), style: {color: 'white', fontSize: 18, fontFamily: "Futura"} } }
-            rightComponent={{text: 'PROJECTS', onPress: ()=>this.myProjectsButtonHandler(), style: {color: 'white', fontSize: 10, fontFamily: "Futura"}}}
+            centerComponent={{text: 'ABOUT ME', onPress: ()=>this.aboutMeButtonHandler(), style: {color: 'white', fontSize: 18, fontFamily: "Futura"}}}
+            rightComponent={{text: 'WELCOME', onPress: ()=>this.welcomeButtonHandler(), style: {color: 'white', fontSize: 11, fontFamily: "Futura" }}}
+            leftComponent={{text: 'PROJECTS', onPress: ()=>this.myProjectsButtonHandler(), style: {color: 'white', fontSize: 11, fontFamily: "Futura"}}}
+            /> 
+            : 
+            ( this.state.myProjectsScreen === true ? 
+            <Header
+            backgroundColor="#31CCC8" 
+            rightComponent={{text: 'ABOUT ME', onPress: ()=>this.aboutMeButtonHandler(), style: {color: 'white', fontSize: 11, fontFamily: "Futura"}}}
+            leftComponent={{text: 'WELCOME', onPress: ()=>this.welcomeButtonHandler(), style: {color: 'white', fontSize: 11, fontFamily: "Futura" }}}
+            centerComponent={{text: 'PROJECTS', onPress: ()=>this.myProjectsButtonHandler(), style: {color: 'white', fontSize: 18, fontFamily: "Futura"}}}
+            /> : 
+            <Header
+            backgroundColor="#31CCC8" 
+            leftComponent={{text: 'ABOUT ME', onPress: ()=>this.aboutMeButtonHandler(), style: {color: 'white', fontSize: 11, fontFamily: "Futura"}}}
+            centerComponent={{text: 'WELCOME', onPress: ()=>this.welcomeButtonHandler(), style: {color: 'white', fontSize: 18, fontFamily: "Futura" }}}
+            rightComponent={{text: 'PROJECTS', onPress: ()=>this.myProjectsButtonHandler(), style: {color: 'white', fontSize: 11, fontFamily: "Futura"}}}
             />
+            )}
 
           {this.state.welcomeScreen === true ? <WelcomeScreen/> : null}
           {this.state.aboutMeScreen === true ? <AboutMeScreen/> : null}
@@ -42,18 +60,6 @@ export default class App extends React.Component {
       );
     }
   }
-
-// const myApp = DrawerNavigator({
-//     Welcome: {
-//       screen: WelcomeScreen
-//     },
-//     AboutMe: {
-//       screen: AboutMeScreen
-//     },
-//     MyProjects: {
-//       screen: MyProjectsScreen
-//     }
-// })
 
 const styles = StyleSheet.create({
   container: {
