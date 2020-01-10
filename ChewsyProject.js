@@ -21,6 +21,7 @@ class ChewsyProject extends Component {
                 <Text style={styles.videoList}>Javascript</Text>
                 <Text style={styles.videoList}>Ruby</Text>
                 <Text style={styles.videoList}>Rails</Text>
+                <Text style={styles.videoList}>Heroku</Text>
                 <Text style={styles.videoList}>HTML & CSS</Text>
                 <Text style={styles.videoList}>React Native Elements</Text>
                 <Text style={styles.dividerLine}>________________________</Text>
@@ -44,7 +45,7 @@ const styles = ({
         paddingTop: "3%"
     },
     videoSubTitle: {
-        fontSize: 18,
+        fontSize: 19,
         fontWeight: "bold",
         color: "black",
         textAlign: "center",

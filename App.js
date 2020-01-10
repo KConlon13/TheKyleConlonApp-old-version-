@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native';
 import { Header, Avatar, Button, Icon, ButtonGroup } from 'react-native-elements';
-
-// import { DrawerNavigator } from 'react-navigation';
 import AboutMeScreen from "./AboutMeScreen"
 import WelcomeScreen from "./WelcomeScreen"
 import MyProjectsScreen from "./MyProjectsScreen"
@@ -35,8 +33,7 @@ export default class App extends React.Component {
             centerComponent={{text: 'ABOUT ME', onPress: ()=>this.aboutMeButtonHandler(), style: {color: 'white', fontSize: 18, fontFamily: "Futura"}}}
             rightComponent={{text: 'WELCOME', onPress: ()=>this.welcomeButtonHandler(), style: {color: 'white', fontSize: 11, fontFamily: "Futura" }}}
             leftComponent={{text: 'PROJECTS', onPress: ()=>this.myProjectsButtonHandler(), style: {color: 'white', fontSize: 11, fontFamily: "Futura"}}}
-            /> 
-            : 
+            /> : 
             ( this.state.myProjectsScreen === true ? 
             <Header
             backgroundColor="#31CCC8" 
@@ -55,7 +52,6 @@ export default class App extends React.Component {
           {this.state.welcomeScreen === true ? <WelcomeScreen/> : null}
           {this.state.aboutMeScreen === true ? <AboutMeScreen/> : null}
           {this.state.myProjectsScreen === true ? <MyProjectsScreen/> : null}
-
         </View>
       );
     }
