@@ -22,8 +22,6 @@ export default class App extends React.Component {
     this.setState({welcomeScreen: false, aboutMeScreen: false, myProjectsScreen: true})
   }
 
-  
-
   render(){
       return (
         <View>
@@ -52,6 +50,7 @@ export default class App extends React.Component {
           {this.state.welcomeScreen === true ? <WelcomeScreen/> : null}
           {this.state.aboutMeScreen === true ? <AboutMeScreen/> : null}
           {this.state.myProjectsScreen === true ? <MyProjectsScreen/> : null}
+
         </View>
       );
     }
@@ -64,3 +63,5 @@ const styles = StyleSheet.create({
     marginTop: "13%",
   }
 });
+
+// To increase the area of what is clickable in the header, maybe i could add 3 touchable opacity components on top of the header, have them in a row using flex direction row, and give each of them the onPress to change state based on whats clicked. This could fix the issue but i will need to figure out to have them inside/on top of the Header

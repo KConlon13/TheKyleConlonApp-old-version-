@@ -64,12 +64,12 @@ const styles = ({
         fontWeight: "bold",
         marginTop: "4%",
         marginBottom: "4%",
-        fontSize: "20"
+        fontSize: 20
     },
     githubDemoDividerLine: {
         marginTop: "4%",
         marginBottom: "4%",
-        fontSize: "20"
+        fontSize: 20
     },
     projectBio: {
         textAlign: "center",
@@ -77,7 +77,7 @@ const styles = ({
         marginBottom: "2%",
         paddingRight: "5%",
         paddingLeft: "5%",
-        fontSize: "15"
+        fontSize: 15
     }
 })
 
