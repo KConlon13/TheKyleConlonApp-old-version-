@@ -27,13 +27,15 @@ class ArtWorkProject extends Component {
         return (
             <View>
                 <Text style={styles.videoTitle} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=vrLMXdY-g58")}>ArtWork</Text>
-                <Image source={require("./ArtWorkScreenshot.png")}  containerStyle={{ width: 370, height: 200, display: "block", marginLeft:"auto", marginRight:"auto" }} PlaceholderContent={ <ActivityIndicator /> } placeholderStyle={{ height: "100%", width: "100%" }} />
+                <View style={{ borderWidth: .2, borderColor: "#E1E1E1", height: 185.8, width: 372}}>
+                <Image source={require("./ArtWorkScreenshot.png")}  containerStyle={{ width: 370, height: 185, display: "block", marginLeft: 2, marginRight: 2 }} PlaceholderContent={ <ActivityIndicator /> } placeholderStyle={{ height: "100%", width: "100%" }} />
+                </View>
                 <View style={styles.githubDemoLine}>
                 <Text style={styles.githubDemoLink} onPress={()=>this.githubClickHandler()}>Github</Text>
                     <Text style={styles.githubDemoDividerLine}> | </Text>
                     <Text style={styles.githubDemoLink} onPress={()=>Linking.openURL("https://www.youtube.com/watch?v=vrLMXdY-g58")} >Demo</Text>
                 </View>
-                <Text style={styles.projectBio}>This is a little write up describing what this project is about. Its going to have words and adjectives and nouns and lots descriptive words oh boy. Coming soon!</Text>
+                <Text style={styles.projectBio}>Bringing mural-needing businesses and money-needing artists together. ArtWork is a platform for businesses to find the perfect artist to paint the officespace mural of their corporate dreams. Artists sign up to be featured on the site for businesses to peruse through, and in return find themselves more clients for mural work.</Text>
                 <Card title="What I Used" titleStyle={{ color: "black"}} containerStyle={{ borderColor: "#31CCC8", marginTop: 10}} >
                     <View style={{ alignItems: "center" }}>
                         <Text style={styles.videoList}>React.js</Text>
