@@ -23,12 +23,11 @@ class ChewsyProject extends Component {
           );
     }
 
-
     render(){
         return (
             <View>
                 <Text style={styles.videoTitle}>Chewsy</Text>
-                <Image source={require("./ChewsyScreenshot.png")} containerStyle={{ width: 370, height: 200, display: "block", marginLeft:"auto", marginRight:"auto",  }} PlaceholderContent={ <ActivityIndicator />} placeholderStyle={height="100", width="100"} />
+                <Image source={require("./ChewsyScreenshot.png")} containerStyle={{ width: 370, height: 200, display: "block", marginLeft:"auto", marginRight:"auto",  }} PlaceholderContent={ <ActivityIndicator />} placeholderStyle={{ height: "100%", width: "100%" }} />
                 <View style={styles.githubDemoLine}>
                     <Text style={styles.githubDemoLink} onPress={()=>this.githubClickHandler()}>Github</Text>
                     <Text style={styles.githubDemoDividerLine}> | </Text>
